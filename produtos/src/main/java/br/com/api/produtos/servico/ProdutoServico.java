@@ -25,14 +25,15 @@ public class ProdutoServico {
     }
     //Método para cadastrar produtos
     public ResponseEntity<?> cadastrar(ProdutoModelo pm){
+        
         if(pm.getNome().equals("")){
             rm.setMensagem("O nome do produto é obrigatório");
             return new ResponseEntity<RespostaModelo>(rm,HttpStatus.BAD_REQUEST);
         }else if(pm.getMarca().equals("")){
-            rm.setMensagem("A marca do produto é obrigatório!");
+            rm.setMensagem("O nome da  marca  é obrigatório!");
             return new ResponseEntity<RespostaModelo>(rm,HttpStatus.BAD_REQUEST);
         }else{
-            return new ResponseEntity<ProdutoModelo>(pr.save(pm),(HttpStatus.CREATED));
+            return new ResponseEntity<ProdutoModelo>(pr.save(pm),(HttpStatus.CREATED);
         }
 
     }
